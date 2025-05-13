@@ -4,8 +4,6 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-ARG REACT_APP_NAME
-ENV REACT_APP_NAME=$REACT_APP_NAME
 RUN npm run build
 
 # Stage 2: Serve with NGINX
